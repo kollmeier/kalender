@@ -1,16 +1,10 @@
+package de.ckollmeier.kalender.View;
+
 import java.util.Calendar;
 import java.util.Locale;
 
-public class Main {
-    public static void main(String[] args) {
-        displayYear(2025);
-    }
-
-    private static void displayYear(int year) {
-        System.out.println(renderYear(year));
-    }
-
-    private static String renderYear(int year) {
+public class CalendarView {
+    public static String renderYear(int year) {
         StringBuilder rendered = new StringBuilder(year + "\n");
         Calendar calendar = Calendar.getInstance();
         calendar.set(Calendar.YEAR, year);
@@ -90,5 +84,4 @@ public class Main {
         }
         return rendered.toString();
     }
-
 }
