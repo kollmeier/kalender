@@ -1,7 +1,7 @@
 import java.util.Calendar;
 import java.util.Locale;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
         displayYear(2025);
     }
@@ -21,7 +21,6 @@ public class main {
             rendered.append(renderMonth(calendar, startsAtWeekday));
             rendered.append("\n");
             startsAtWeekday = (startsAtWeekday + calendar.getActualMaximum(Calendar.DAY_OF_MONTH) - 1) % 7 + 1;
-
         }
         return rendered.toString();
     }
